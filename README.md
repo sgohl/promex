@@ -13,7 +13,7 @@ docker build -t promex .
 
 Run a Test
 ```
-docker run -it --rm --name promex -p 8080:8080 promex
+docker run --rm --name promex -p 8080:8080 promex
 ```
 
 see: http://localhost:8080
