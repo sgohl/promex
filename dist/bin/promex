@@ -23,28 +23,28 @@ case $1 in
           ;;
           *)
             CHECKS="${3}"
-          
-            for CHECK in ${CHECKS}
-            do
-            
-              PATH=${BASE}/${GROUP}/${CHECK}
-              NAME="${GROUP,,}_${CHECK,,}"
-
-              source ${PATH}/meta
-              LINE_HELP="# HELP ${NAME} ${HELP}"
-              LINE_TYPE="# TYPE ${NAME} ${TYPE}"
-
-              VALUE=$(bash ${PATH}/run 2>&1)
-              LINE_VAL="${NAME} ${VALU}E"
-
-              cat > ${OUT}/${NAME} <<EOF
-              ${LINE_HELP}
-              ${LINE_TYPE}
-              ${LINE_VAL}
-EOF
-            done
           ;;
         esac
+        
+        for CHECK in ${CHECKS}
+        do
+
+          PATH=${BASE}/${GROUP}/${CHECK}
+          NAME="${GROUP,,}_${CHECK,,}"
+
+          source ${PATH}/meta
+          LINE_HELP="# HELP ${NAME} ${HELP}"
+          LINE_TYPE="# TYPE ${NAME} ${TYPE}"
+
+          VALUE=$(bash ${PATH}/run 2>&1)
+          LINE_VAL="${NAME} ${VALU}E"
+
+          cat > ${OUT}/${NAME} <<EOF
+          ${LINE_HELP}
+          ${LINE_TYPE}
+          ${LINE_VAL}
+EOF
+        done
       ;;
     esac
   ;;
