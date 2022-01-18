@@ -55,7 +55,7 @@ EOF
   
   metrics)
     promex run all
-    cat ${BASE}/*/*/out
+    cat ${OUT}/*_*
   ;;
   
   web)
