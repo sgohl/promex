@@ -25,7 +25,7 @@ case $1 in
           ;;
         esac
         
-        echo "PROMEX :: run GROUP=$2 CHECKS=$CHECKS"
+        #echo "PROMEX :: run GROUP=$2 CHECKS=$CHECKS"
         
         for CHECK in ${CHECKS}
         do
@@ -40,7 +40,7 @@ case $1 in
           VALUE=$(bash ${CHECK_PATH}/run 2>&1)
           LINE_VAL="${NAME} ${VALUE}"
 
-printf "PROMEX :: $CHECK_PATH \r\n$NAME \r\n$LINE_HELP \r\n$LINE_TYPE \r\n$LINE_VAL"
+#printf "PROMEX :: $CHECK_PATH \r\n$NAME \r\n$LINE_HELP \r\n$LINE_TYPE \r\n$LINE_VAL"
 
           cat > ${OUT}/${NAME} <<EOF
 ${LINE_HELP}
