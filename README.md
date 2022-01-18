@@ -37,17 +37,16 @@ Currently there are 3 ways to trigger and scrape metrics.
 - `promex run foo all` -> Runs all checks in group `foo`  -> synchronous
 - `promex run foo bar` -> Runs check `bar` in group `foo` -> synchronous
 
-###### HTTP examples:
-
-http://localhost:8080/metrics
-http://localhost:8080/group?g=foo
-http://localhost:8080/check?g=foo&c=bar
-http://localhost:8080/check?g=foo&c=baz
-
 The peculiarity on the specific ones is that it will return the output directly after the command is finished, hence synchronous.
 
+##### HTTP examples:
 
-### Credits
+- http://localhost:8080/metrics
+- http://localhost:8080/group?g=foo
+- http://localhost:8080/check?g=foo&c=bar
+- http://localhost:8080/check?g=foo&c=baz
+
+#### Credits
 
 - https://github.com/msoap/shell2http
 - http://vicerveza.homeunix.net/~viric/soft/ts/
