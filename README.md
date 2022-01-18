@@ -23,7 +23,7 @@ see: http://localhost:8080
 Checks are located per default in `/checks` and are grouped into folders, so you can have a repertoire of all your checks and only run a specific `list` of groups in certain containers, specified via docker variable `GROUPS=`
 
 The example checks `bar` and `baz` are placed in the group `foo`. They both just generate a random number.  
-A check contains of two files:
+A check consists of two files:
 
 - meta: there you define the `TYPE` and `HELP` line for the prometheus exporter metrics page
 - run: the actual script to be run. Should return not more than exactly that value you want to publish
