@@ -15,4 +15,4 @@ COPY dist /
 RUN chmod -R +x /bin
 
 ENTRYPOINT []
-CMD ["/bin/promex"]
+CMD ["/bin/promex", "web"]
