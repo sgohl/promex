@@ -30,7 +30,7 @@ A check consists of two files:
 
 The /metrics route will trigger all checks via `ts` task-spooler (for parallel runs) and `flock` (for avoiding overlaps) and afterwards `cat` all output files (directory is `$OUT`)
 
-*Note:* First time it most certainly won't output anything. Prometheus will scrape every X seconds anyway.
+*Note:* First time it most certainly won't output anything due to the short time between trigger and `cat`. Prometheus will scrape every X seconds anyway.
 
 Currently there are 3 ways to trigger and scrape metrics.
 
