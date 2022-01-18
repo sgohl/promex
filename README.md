@@ -22,14 +22,15 @@ see: http://localhost:8080
 
 Checks are located per default in `/checks` and are grouped into folders, so you can have a repertoire of all your checks and only run a specific `list` of groups in certain containers, specified via docker variable `GROUPS=`
 
-The example checks `bar` and `baz` are placed in the group `foo`. They both just generate a random number.
-  A check contains of two files:
+The example checks `bar` and `baz` are placed in the group `foo`. They both just generate a random number.  
+A check contains of two files:
 
 - meta: there you define the `TYPE` and `HELP` line for the prometheus exporter metrics page
 - run: the actual script to be run. Should return not more than exactly that value you want to publish
 
-The /metrics route will trigger all checks via task-spooler (for parallel runs) and flock (for avoiding overlaps) and `cat` all output files in `$OUT` 
-  *Note:* First time it will most certainly not output anything. Prometheus will scrape every X seconds anyway.
+The /metrics route will trigger all checks via task-spooler (for parallel runs) and flock (for avoiding overlaps) and `cat` all output files in `$OUT`  
+
+*Note:* First time it will most certainly not output anything. Prometheus will scrape every X seconds anyway.
 
 Currently there are 3 ways to trigger and scrape metrics.
 
