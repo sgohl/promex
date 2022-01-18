@@ -9,7 +9,7 @@ COPY checks /checks
 
 ENV OPTS="-cgi -include-stderr -show-errors -export-all-vars"
 
-ENV TS_ONFINISH="/bin/onfinish"
+#ENV TS_ONFINISH="/bin/onfinish"
 ENV TS_SLOTS="100"
 ENV TS_MAXFINISHED="1000"
 ENV BASE="/checks"
