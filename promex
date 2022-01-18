@@ -9,7 +9,8 @@ case $1 in
           CHECKS=$(find ${BASE}/${GROUP} -maxdepth 1 -mindepth 1  -type d | xargs basename -a)
           for CHECK in ${CHECKS}
           do
-            flock -x -n /tmp/${GROUP}_${CHECK}.flock ts -n /bin/promex run ${GROUP} ${CHECK}
+            #flock -x -n /tmp/${GROUP}_${CHECK}.flock ts -n /bin/promex run ${GROUP} ${CHECK}
+            ts flock -x -n /tmp/${GROUP}_${CHECK}.flock promex run ${GROUP} ${CHECK}
           done
         done
       ;;
