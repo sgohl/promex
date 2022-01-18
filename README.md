@@ -34,7 +34,7 @@ The /metrics route will trigger all checks via `ts` task-spooler (for parallel r
 
 Currently there are 3 ways to trigger and scrape metrics.
 
-- `promex run all` -> Runs all checks in all defined `$GROUPS`  -> asynchronous
+- `promex run [all]` -> Runs all checks in all defined `$GROUPS`  -> asynchronous
 - `promex run foo [all]` -> Runs all checks in group `foo`  -> synchronous
 - `promex run foo bar` -> Runs check `bar` in group `foo` -> synchronous
 
