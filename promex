@@ -36,7 +36,9 @@ case $1 in
           LINE_TYPE="# TYPE ${NAME} ${TYPE}"
 
           VALUE=$(bash ${PATH}/run 2>&1)
-          LINE_VAL="${NAME} ${VALU}E"
+          LINE_VAL="${NAME} ${VALUE}"
+
+echo $PATH $NAME $LINE_HELP $LINE_TYPE $LINE_VAL
 
           cat > ${OUT}/${NAME} <<EOF
           ${LINE_HELP}
