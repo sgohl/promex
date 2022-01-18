@@ -30,17 +30,17 @@ case $1 in
         for CHECK in ${CHECKS}
         do
 
-          PATH=${BASE}/${GROUP}/${CHECK}
+          CHECK_PATH=${BASE}/${GROUP}/${CHECK}
           NAME="${GROUP,,}_${CHECK,,}"
 
-          source ${PATH}/meta
+          source ${CHECK_PATH}/meta
           LINE_HELP="# HELP ${NAME} ${HELP}"
           LINE_TYPE="# TYPE ${NAME} ${TYPE}"
 
-          VALUE=$(bash ${PATH}/run 2>&1)
+          VALUE=$(bash ${CHECK_PATH}/run 2>&1)
           LINE_VAL="${NAME} ${VALUE}"
 
-echo $PATH $NAME $LINE_HELP $LINE_TYPE $LINE_VAL
+echo "PROMEX ::DEBUG :: $PATH $NAME $LINE_HELP $LINE_TYPE $LINE_VAL"
 
           cat > ${OUT}/${NAME} <<EOF
           ${LINE_HELP}
