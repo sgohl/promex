@@ -43,7 +43,7 @@ The peculiarity on the specific ones is that it will return the output directly 
 ##### HTTP examples:
 
 - http://localhost:8080/metrics
-- http://localhost:8080/group?g=foo
+- http://localhost:8080/check?g=foo
 - http://localhost:8080/check?g=foo&c=bar
 
 #### Credits
