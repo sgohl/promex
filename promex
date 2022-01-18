@@ -63,8 +63,9 @@ EOF
   ;;
   
   web)
-    /app/shell2http -cgi -include-stderr -show-errors -port 8080 -form -export-all-vars ${OPTS} \
+    mkdir -p $OUT
+    /app/shell2http -port 8080 -form ${OPTS} \
       /metrics    'promex metrics' \
-      /check  'promex run ${v_g} ${v_c} ; cat ${OUT}/${v_g}_${v_c}*' \
+      /check      'promex run ${v_g} ${v_c} ; cat ${OUT}/${v_g}_${v_c}*'
   ;;
 esac
