@@ -1,2 +1,2 @@
 # promex
-Prometheus Exporter for Shell Scripts
+Prometheus Exporter for Shell Checks
