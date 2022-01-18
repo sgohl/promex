@@ -46,6 +46,8 @@ case $1 in
 ${LINE_HELP}
 ${LINE_TYPE}
 ${LINE_VAL}
+$SHLVL
+$TERM
 EOF
         done
       ;;
