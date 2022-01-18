@@ -7,6 +7,8 @@ ENV TS_MAXFINISHED="1000"
 ENV BASE="/checks"
 ENV OUT="/tmp/out"
 
+ENV GROUPS="foo"
+
 RUN apk add -U --no-cache bash curl docker jq coreutils openssl ts
 RUN mkdir -p $OUT
 
