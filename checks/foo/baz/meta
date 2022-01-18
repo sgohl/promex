@@ -1,0 +1,2 @@
+HELP="This is an example check. TYPE can be one of gauge|counter|summary|untyped"
+TYPE=gauge
