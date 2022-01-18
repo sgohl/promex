@@ -46,8 +46,6 @@ case $1 in
 ${LINE_HELP}
 ${LINE_TYPE}
 ${LINE_VAL}
-$SHLVL
-$TERM
 EOF
           if [[ $SHLVL -lt 3 ]]
           then
