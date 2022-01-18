@@ -10,8 +10,9 @@ ENV OUT="/tmp/out"
 RUN apk add -U --no-cache bash curl docker jq coreutils openssl ts
 RUN mkdir -p $OUT
 
-COPY dist /
 COPY checks /checks
+
+COPY promex /bin/
 RUN chmod -R +x /bin
 
 ENTRYPOINT []
