@@ -1,2 +1,2 @@
-HELP="This is an example check. TYPE can be one of gauge|counter|summary|untyped"
+HELP="This is an example check. TYPE can be one of gauge|counter|summary|histogram|untyped"
 TYPE=gauge
