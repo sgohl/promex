@@ -16,6 +16,8 @@ Run a Test
 docker run -it --rm --name promex -p 8080:8080 promex
 ```
 
+see: http://localhost:8080
+
 ## How it works
 
 Checks are located per default in `/checks` and are grouped into group folders, so you can have a repertoire of all your groups and only run a specific list of groups with certain containers, specified via docker variable `GROUPS=`
