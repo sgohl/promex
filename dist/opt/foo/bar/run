@@ -1,0 +1,2 @@
+# generate a random number as return value
+echo $(( ( RANDOM % 100 )  + 1 ))
