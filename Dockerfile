@@ -1,6 +1,5 @@
 FROM msoap/shell2http
 
-ENV OPTS="-no-index"
 ENV TS_ONFINISH="/bin/onfinish"
 ENV TS_SLOTS="100"
 ENV TS_MAXFINISHED="1000"
