@@ -25,7 +25,7 @@ Checks are located per default in `/checks` and are grouped into folders, so you
 The example checks `bar` and `baz` are placed in the group `foo`. They both just generate a random number.  
 A check consists of two files:
 
-- meta: there you define the `TYPE` and `HELP` line for the prometheus exporter metrics page
+- meta: there you define the `TYPE` and `HELP` line for the prometheus exporter metrics page (see https://prometheus.io/docs/concepts/metric_types/)
 - run: the actual script to be run. Should return not more than exactly that value you want to publish
 
 The /metrics route will trigger all checks via `ts` task-spooler (for parallel runs) and `flock` (with `-n` for avoiding overlaps and stapling) and afterwards `cat` all output files (directory is `$OUT`)
