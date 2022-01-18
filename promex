@@ -43,13 +43,11 @@ case $1 in
 printf "PROMEX :: $CHECK_PATH \r\n$NAME \r\n$LINE_HELP \r\n$LINE_TYPE \r\n$LINE_VAL"
 
           cat > ${OUT}/${NAME} <<EOF
-          ${LINE_HELP}
-          ${LINE_TYPE}
-          ${LINE_VAL}
+${LINE_HELP}
+${LINE_TYPE}
+${LINE_VAL}
 EOF
         done
-        
-        echo "DONE."
       ;;
     esac
   ;;
