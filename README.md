@@ -15,3 +15,13 @@ Run a Test
 ```
 docker run -it --rm -p 8080:8080 promex
 ```
+
+## Docs
+
+Checks are located per default in `/checks` and are grouped into group folders, so you can have a repertoire of all groups and only run a specific list of groups with certain containers, specified via docker variable `GROUPS=`
+
+The example check `bar` is placed in the group `foo` and contains of two files:
+
+- meta: there you define the `TYPE` and `HELP` line for the prometheus exporter metrics page
+- run: the actual script to be run. Should return not more than exactly that value you want to publish
+
