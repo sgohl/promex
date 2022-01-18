@@ -31,6 +31,14 @@ A check contains of two files:
 The /metrics route will trigger all checks via task-spooler (for parallel runs) and flock (for avoiding overlaps) and `cat` all output files in `$OUT` 
   *Note:* First time it will most certainly not output anything. Prometheus will scrape every X seconds anyway.
 
+Currently there are 3 ways to trigger and scrape metrics.
+
+- `promex run all` -> Runs all checks in all defined `$GROUPS`  -> asynchronous
+- `promex run foo all` -> Runs all checks in group `foo`  -> synchronous
+- `promex run foo bar` -> Runs check `bar` in group `foo` -> synchronous
+
+The peculiarity on the specific ones is that it will return the output directly after the command is finished, hence synchronous.
+
 
 ### Credits
 
