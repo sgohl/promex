@@ -25,6 +25,8 @@ case $1 in
           ;;
         esac
         
+        echo "PROMEX :: run GROUP=$2 CHECKS=$CHECKS"
+        
         for CHECK in ${CHECKS}
         do
 
@@ -46,6 +48,8 @@ echo $PATH $NAME $LINE_HELP $LINE_TYPE $LINE_VAL
           ${LINE_VAL}
 EOF
         done
+        
+        echo "DONE."
       ;;
     esac
   ;;
