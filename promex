@@ -49,6 +49,11 @@ ${LINE_VAL}
 $SHLVL
 $TERM
 EOF
+          if [[ $SHLVL -lt 3 ]]
+          then
+            cat ${OUT}/${NAME}
+          fi
+    
         done
       ;;
     esac
