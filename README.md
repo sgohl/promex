@@ -30,7 +30,7 @@ The /metrics route will trigger all checks via task-spooler (for parallel runs) 
   *Note:* First time it will most certainly not output anything. Prometheus will scrape every X seconds anyway.
 
 
-# Credits
+### Credits
 
 - https://github.com/msoap/shell2http
 - http://vicerveza.homeunix.net/~viric/soft/ts/
