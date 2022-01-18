@@ -11,3 +11,7 @@ Build Docker Image
 docker build -t promex .
 ```
 
+Run a Test
+```
+docker run -it --rm -p 8080:8080 promex
+```
