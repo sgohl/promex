@@ -1,0 +1,24 @@
+#!/bin/bash -e
+
+case ${ACTION} in
+  run)
+    for GROUP in ${GROUPS}
+    do
+      CHECKS=$(ls -d1 ${BASE}/${GROUP}/*)
+      for CHECK in ${CHECKS}
+      do
+        flock -x -n /tmp/${GROUP}_${CHECK}.flock ts -n /bin/promex ${GROUP} ${CHECK}
+      done
+    done
+  ;;
+  
+  metrics)
+    promex run
+    cat ${BASE}/*/*/out
+  ;;
+  
+  '')
+    /app/shell2http -cgi -include-stderr -show-errors -port 8080 -form ${OPTS} \
+      /metrics    'promex metrics'
+  ;;
+esac
