@@ -26,7 +26,8 @@ A check contains of two files:
 - meta: there you define the `TYPE` and `HELP` line for the prometheus exporter metrics page
 - run: the actual script to be run. Should return not more than exactly that value you want to publish
 
-
+The /metrics route will trigger all checks via task-spooler (for parallel runs) and flock (for avoiding overlaps) and `cat` all output files in `$OUT` 
+  *Note:* First time it will most certainly not output anything. Prometheus will scrape every X seconds anyway.
 
 
 # Credits
