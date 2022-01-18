@@ -11,7 +11,7 @@ RUN apk add -U --no-cache bash curl docker jq coreutils openssl ts
 RUN mkdir -p $OUT
 
 COPY dist /
-COPY checks /
+COPY checks /checks
 RUN chmod -R +x /bin
 
 ENTRYPOINT []
