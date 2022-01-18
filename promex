@@ -3,7 +3,7 @@
 case $1 in
   run)  
     case $2 in
-      all)
+      all|'')
         for GROUP in ${GROUPS}
         do
           CHECKS=$(find ${BASE}/${GROUP} -maxdepth 1 -mindepth 1  -type d | xargs basename -a)
