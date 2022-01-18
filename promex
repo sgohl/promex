@@ -40,7 +40,7 @@ case $1 in
           VALUE=$(bash ${CHECK_PATH}/run 2>&1)
           LINE_VAL="${NAME} ${VALUE}"
 
-echo "PROMEX ::DEBUG :: $PATH $NAME $LINE_HELP $LINE_TYPE $LINE_VAL"
+printf "PROMEX :: $CHECK_PATH \r\n$NAME \r\n$LINE_HELP \r\n$LINE_TYPE \r\n$LINE_VAL"
 
           cat > ${OUT}/${NAME} <<EOF
           ${LINE_HELP}
