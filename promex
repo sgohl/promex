@@ -59,6 +59,7 @@ EOF
   
   metrics)
     promex run all
+    echo "promex_hostname $HOSTNAME"
     cat ${OUT}/*_*
   ;;
   
